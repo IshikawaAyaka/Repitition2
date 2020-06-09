@@ -4,12 +4,9 @@ abstract class Referee{
 	protected Card answerCard;
 	private CardStack cardStack;
 	
-	public Referee() {
-		
-	}
 	
 	public Referee(CardStack cardStack) {
-		
+		this.cardStack = cardStack;
 	}
 	
 	public void setAnswerCard() {
