@@ -2,7 +2,8 @@ package guessing_game;
 
 public class StrictReferee extends Referee{
 	
-	public StrictReferee() {
+	public StrictReferee(CardStack cardStack) {
+		super(cardStack);
 	}
 
 	

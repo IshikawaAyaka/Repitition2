@@ -2,7 +2,8 @@ package guessing_game;
 
 public class GentleReferee extends Referee{
 	
-	public GentleReferee() {
+	public GentleReferee(CardStack cardStack) {
+		super(cardStack);
 	}
 	
 	public boolean judge(Card card) {
@@ -32,9 +33,9 @@ public class GentleReferee extends Referee{
 		if(answerCard.getSuit() == card.getSuit()) {
 			System.out.println("スート：一致");
 		}else{			
-			if((answerCard.getSuit() == Suit.SPADE) ||(answerCard.getSuit() == Suit.CLUB) && (card.getSuit() == Suit.SPADE) || (card.getSuit() == Suit.CLUB)) {
+			if(((answerCard.getSuit() == Suit.SPADE) ||(answerCard.getSuit() == Suit.CLUB)) && ((card.getSuit() == Suit.SPADE) || (card.getSuit() == Suit.CLUB))) {
 				System.out.println("スート：惜しい");
-			}else if((answerCard.getSuit() == Suit.HEART) || (answerCard.getSuit() == Suit.DIAMOND) && (card.getSuit() == Suit.HEART) || (card.getSuit() == Suit.DIAMOND)){
+			}else if(((answerCard.getSuit() == Suit.HEART) || (answerCard.getSuit() == Suit.DIAMOND)) && ((card.getSuit() == Suit.HEART) || (card.getSuit() == Suit.DIAMOND))){
 				System.out.println("スート：惜しい");
 			}else {
 				System.out.println("スート:不一致");
