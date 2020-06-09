@@ -14,12 +14,12 @@ public class Turn {
 	}
 
 	public boolean requestCard() {
-		int a[]=player.salectCard();
+		int a[]=player.selectCard();
 		int x=a[0];
 		int y=a[1];
 		boolean i=checkNumber(x);
 		boolean j=checkSuit(y);
-		if(i==true&&j==true) {
+		if(i == true && j == true) {
 			card.setNumber(x);
 			switch(y) {
 			case 0:
@@ -39,6 +39,10 @@ public class Turn {
 		}else{
 			return false;
 		}
+	}
+
+	public Card getCard() {
+		return card;
 	}
 
 	public boolean checkSuit(int x) {
