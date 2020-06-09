@@ -1,17 +1,21 @@
-public abstract class Referee {
+package guessing_game;
 
+abstract class Referee{
 	protected Card answerCard;
-
 	private CardStack cardStack;
-
+	
 	public Referee() {
-
+		
 	}
-
-	public void setAnswerCard(Card card) {
-
+	
+	public Referee(CardStack cardStack) {
+		
 	}
-
-	public abstract boolean judge(Card card);
+	
+	public void setAnswerCard() {
+		answerCard = cardStack.draw();
+	}
+	
+	abstract boolean judge(Card card);
 
 }
