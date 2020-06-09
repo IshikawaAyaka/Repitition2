@@ -1,29 +1,58 @@
+package guessing_game;
+
 public class Turn {
-
-	private Player playerName;
-
-	private int numberX;
-
-	private int suitX;
 
 	private Player player;
 
 	private Card card;
+	
+	private Suit suit;
 
 	public Turn(Player player) {
-
+		this.player=player;
+		card=new Card();
 	}
 
 	public boolean requestCard() {
-		return false;
+		int a[]=player.salectCard();
+		int x=a[0];
+		int y=a[1];
+		boolean i=checkNumber(x);
+		boolean j=checkSuit(y);
+		if(i==true&&j==true) {
+			card.setNumber(x);
+			switch(y) {
+			case 0:
+				card.setSuit(suit.SPADE);
+			case 1:
+				card.setSuit(suit.HEART);
+			case 2:
+				card.setSuit(suit.DIAMOND);
+			case 3:
+				card.setSuit(suit.CLUB);
+			}
+			return true;
+		}else{
+			return false;
+		}
 	}
 
-	public boolean changeSuit(int x) {
-		return false;
+	public boolean checkSuit(int x) {
+		if(0<=x&&x<=3) {
+			return true;
+		}else{
+			System.out.println("カードのスートは0～3の値を入力してください。");
+			return false;
+		}
 	}
 
-	public boolean checkNumber(int y) {
-		return false;
+	public boolean checkNumber(int x) {
+		if(card.getMIN()<=x&&x<=card.getMAX()) {
+			return true;
+		}else {
+			System.out.println("カードの数字は1～13の値を入力してください。");
+			return false;
+		}
 	}
 
 }
