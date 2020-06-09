@@ -41,7 +41,7 @@ public class Turn {
 		if(0<=x&&x<=3) {
 			return true;
 		}else{
-			System.out.println("ƒJ[ƒh‚ÌƒX[ƒg‚Í0`3‚Ì’l‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+			System.out.println("ã‚«ãƒ¼ãƒ‰ã®ã‚¹ãƒ¼ãƒˆã¯0ï½ž3ã®å€¤ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 			return false;
 		}
 	}
@@ -50,7 +50,7 @@ public class Turn {
 		if(card.getMIN()<=x&&x<=card.getMAX()) {
 			return true;
 		}else {
-			System.out.println("ƒJ[ƒh‚Ì”Žš‚Í1`13‚Ì’l‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+			System.out.println("ã‚«ãƒ¼ãƒ‰ã®æ•°å­—ã¯1ï½ž13ã®å€¤ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 			return false;
 		}
 	}
