@@ -24,12 +24,16 @@ public class Turn {
 			switch(y) {
 			case 0:
 				card.setSuit(suit.SPADE);
+				break;
 			case 1:
 				card.setSuit(suit.HEART);
+				break;
 			case 2:
 				card.setSuit(suit.DIAMOND);
+				break;
 			case 3:
 				card.setSuit(suit.CLUB);
+				break;
 			}
 			return true;
 		}else{
