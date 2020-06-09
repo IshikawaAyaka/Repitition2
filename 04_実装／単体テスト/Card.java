@@ -1,5 +1,7 @@
-public class Card {
+package guessing_game;
 
+public class Card {
+	
 	private static int MIN = 1;
 
 	private static int MAX = 13;
@@ -13,27 +15,28 @@ public class Card {
 	}
 
 	public int getNumber() {
-		return 0;
+		return cardNumber;
 	}
 
 	public Suit getSuit() {
-		return null;
+		return cardSuit;
 	}
 
 	public int getMAX() {
-		return 0;
+		return MAX;
 	}
 
 	public int getMIN() {
-		return 0;
+		return MIN;
 	}
 
-	public void setNumber(int caedNumber) {
+	public void setNumber(int cardNumber) {
+		this.cardNumber = cardNumber;
 
 	}
 
 	public void setSuit(Suit cardSuit) {
-
+		this.cardSuit = cardSuit;
 	}
 
 }
