@@ -40,4 +40,12 @@ public class PlayerTest {
 		int[] expected = {-1,-1};
 		assertThat(actual,is(expected));
 	}
+
+	@Test
+	public void test3() {
+		Player player = new Player("A");
+		String actual = player.getName();
+		String expected = "A";
+		assertThat(actual,is(expected));
+	}
 }
