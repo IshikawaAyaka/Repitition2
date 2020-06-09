@@ -7,7 +7,7 @@ public class Player {
 	private String name;
 
 	public Player(String name) {
-		this.name = name;
+		this.setName(name);
 	}
 
 	public int selectReferee() {
@@ -28,8 +28,7 @@ public class Player {
 	}
 
 
-
-	public int[] salectCard() {
+	public int[] selectCard() {
 		System.out.println("数とスートを入力してください");
 		System.out.println("---");
 		System.out.println("* 入力例 : 数 [半角スペース] スート ");
@@ -50,5 +49,13 @@ public class Player {
 			return ret;
 		}
 	
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }
