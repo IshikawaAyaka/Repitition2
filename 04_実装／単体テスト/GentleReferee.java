@@ -1,15 +1,45 @@
-public class GentleReferee extends Referee {
+package guessing_game;
 
-	public GentleReferee(CardStack card) {
-
+public class GentleReferee extends Referee{
+	
+	public GentleReferee() {
 	}
-
+	
 	public boolean judge(Card card) {
-		return false;
+		boolean result = false;
+		
+		getHint(card);
+		
+		//数・スートともに一致の場合trueを返す
+		if(answerCard.getNumber() == card.getNumber() && answerCard.getSuit() == card.getSuit()) {
+			result = true;
+		}
+		return result;
 	}
-
-	public void getHint() {
-
+	
+	private void getHint(Card card) {
+		//数の判定を行う
+		if(answerCard.getNumber() == card.getNumber()) {
+			System.out.println("数：一致");
+		}else if(answerCard.getNumber() < card.getNumber()){
+			System.out.println("数：もっと小さい");
+		}else {
+			System.out.println("数：もっと大きい");
+		}
+		//スートの判定を行う
+		//スートが一致していない場合、色が同じなら「惜しい」、色が異なるなら「不一致」と表示する。
+		//SPADE,HEART,DIAMOND,CLUB
+		if(answerCard.getSuit() == card.getSuit()) {
+			System.out.println("スート：一致");
+		}else{			
+			if((answerCard.getSuit() == Suit.SPADE) ||(answerCard.getSuit() == Suit.CLUB) && (card.getSuit() == Suit.SPADE) || (card.getSuit() == Suit.CLUB)) {
+				System.out.println("スート：惜しい");
+			}else if((answerCard.getSuit() == Suit.HEART) || (answerCard.getSuit() == Suit.DIAMOND) && (card.getSuit() == Suit.HEART) || (card.getSuit() == Suit.DIAMOND)){
+				System.out.println("スート：惜しい");
+			}else {
+				System.out.println("スート:不一致");
+			}
+		}
 	}
 
 }
