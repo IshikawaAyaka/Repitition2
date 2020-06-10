@@ -33,19 +33,20 @@ public class Game {
 		referee.setAnswerCard();
 		
 		boolean judgement = false;
-		boolean canSelect = false;
+		
 		
 		while(judgement == false) {
 		//ターンの生成
 		turn = new Turn(player);
-		
 			//数字、スートの入力
+		boolean canSelect = false;
 		while(canSelect == false) {
 		canSelect = turn.requestCard();
 		}
 		//判定
 		Card card = turn.getCard();
 		judgement = referee.judge(card);
+		}
 		}
 		
 	}
