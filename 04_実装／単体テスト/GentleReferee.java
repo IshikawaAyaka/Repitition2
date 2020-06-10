@@ -6,6 +6,7 @@ public class GentleReferee extends Referee{
 		super(cardStack);
 	}
 	
+	//判定する
 	public boolean judge(Card card) {
 		boolean result = false;
 		
@@ -17,7 +18,8 @@ public class GentleReferee extends Referee{
 		}
 		return result;
 	}
-	
+
+	//ヒントを出す
 	private void getHint(Card card) {
 		//数の判定を行う
 		if(answerCard.getNumber() == card.getNumber()) {

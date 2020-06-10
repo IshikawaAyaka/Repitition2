@@ -10,10 +10,11 @@ public class Player {
 		this.setName(name);
 	}
 
+	//å¯©åˆ¤ã‚’é¸ã¶
 	public int selectReferee() {
-		System.out.println("R”»‚ğ‘I‚ñ‚Å‰º‚³‚¢ ");
+		System.out.println("å¯©åˆ¤ã‚’é¸ã‚“ã§ä¸‹ã•ã„ ");
 		System.out.println("---");
-		System.out.println("* “ü—Í—á : 1:Œµ‚µ‚¢R”», 2:‚â‚³‚µ‚¢R”» ");
+		System.out.println("* å…¥åŠ›ä¾‹ : 1:å³ã—ã„å¯©åˆ¤, 2:ã‚„ã•ã—ã„å¯©åˆ¤ ");
 		int ret;
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -28,11 +29,12 @@ public class Player {
 	}
 
 
+	//ã‚«ãƒ¼ãƒ‰ã‚’é¸ã¶
 	public int[] selectCard() {
-		System.out.println("”‚ÆƒX[ƒg‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+		System.out.println("æ•°ã¨ã‚¹ãƒ¼ãƒˆã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 		System.out.println("---");
-		System.out.println("* “ü—Í—á : ” [”¼ŠpƒXƒy[ƒX] ƒX[ƒg ");
-		System.out.println("yƒX[ƒg‚Ì“ü—Í z 0:ƒXƒy[ƒh, 1:ƒn[ƒg, 2:ƒ_ƒCƒ„, 3:ƒNƒ‰ƒu ");
+		System.out.println("* å…¥åŠ›ä¾‹ : æ•° [åŠè§’ã‚¹ãƒšãƒ¼ã‚¹] ã‚¹ãƒ¼ãƒˆ ");
+		System.out.println("ã€ã‚¹ãƒ¼ãƒˆã®å…¥åŠ› ã€‘ 0:ã‚¹ãƒšãƒ¼ãƒ‰, 1:ãƒãƒ¼ãƒˆ, 2:ãƒ€ã‚¤ãƒ¤, 3:ã‚¯ãƒ©ãƒ– ");
 		System.out.println("---");
 		int[] ret = new int[2];
 		try {
@@ -51,10 +53,12 @@ public class Player {
 	
 	}
 
+	//åå‰ã®å–å¾—
 	public String getName() {
 		return name;
 	}
 
+	//åå‰ã®è¨­å®š
 	public void setName(String name) {
 		this.name = name;
 	}

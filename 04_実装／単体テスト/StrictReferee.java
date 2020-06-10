@@ -6,7 +6,8 @@ public class StrictReferee extends Referee{
 		super(cardStack);
 	}
 
-	
+
+	//判定する
 	public boolean judge(Card card) {
 		boolean result = false;
 		//数の判定を行う

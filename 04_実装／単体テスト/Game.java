@@ -8,14 +8,15 @@ public class Game {
 
 	private Turn turn;
 
+	//ã‚²ãƒ¼ãƒ ã®å®Ÿè¡Œ
 	public void start() {
-		//ƒJ[ƒhƒXƒ^ƒbƒN‚Ì¶¬
+		//ã‚«ãƒ¼ãƒ‰ã‚¹ã‚¿ãƒƒã‚¯ã®ç”Ÿæˆ
 		CardStack stack = new CardStack();
 		
-		//ƒvƒŒƒCƒ„[‚Ì¶¬
+		//ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ç”Ÿæˆ
 		player = new Player("A");
 		
-		//R”»‚Ì‘I‘ğ
+		//å¯©åˆ¤ã®é¸æŠ
 		while(true) {
 			int refNum = player.selectReferee();
 		if(refNum == 1) {
@@ -25,30 +26,28 @@ public class Game {
 			referee = new GentleReferee(stack);
 			break;
 		}else {
-			System.out.println("1‚©2‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
-		}
+			System.out.println("1ã‹2ã®æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
+			}
 		}
 		
-		//“š‚¦‚ÌƒJ[ƒh‚Ìİ’è
+		//ç­”ãˆã®ã‚«ãƒ¼ãƒ‰ã®è¨­å®š
 		referee.setAnswerCard();
 		
 		boolean judgement = false;
-		
-		
 		while(judgement == false) {
-		//ƒ^[ƒ“‚Ì¶¬
+		//ã‚¿ãƒ¼ãƒ³ã®ç”Ÿæˆ
 		turn = new Turn(player);
-			//”šAƒX[ƒg‚Ì“ü—Í
+		//æ•°å­—ã€ã‚¹ãƒ¼ãƒˆã®å…¥åŠ›
 		boolean canSelect = false;
 		while(canSelect == false) {
 		canSelect = turn.requestCard();
 		}
-		//”»’è
+		//åˆ¤å®š
 		Card card = turn.getCard();
 		judgement = referee.judge(card);
-		}
+			}
 		}
 		
 	}
 
-}
+

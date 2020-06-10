@@ -5,14 +5,14 @@ public class CardStack {
 
 	public CardStack() {
 
+		//カード作成
 		for (int i = 0; i <= 3; i++) {
 			for (int j = 0; j < 13; j++) {
 				cards[i][j] = new Card();
 			}
 		}
 
-		// suit�쐬
-		// number���쐬
+		// suit,numberを設定
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 13; j++) {
 				switch (i) {
@@ -32,9 +32,9 @@ public class CardStack {
 				}
 			}
 		}
-
 	}
 
+	//カードを引く
 	public Card draw() {
 		int x = (int) ((Math.random() * 3) + 1);
 		int y = (int) ((Math.random() * 13) + 1);
@@ -43,4 +43,3 @@ public class CardStack {
 	}
 
 }
-
