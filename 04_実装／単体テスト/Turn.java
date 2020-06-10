@@ -13,6 +13,7 @@ public class Turn {
 		card=new Card();
 	}
 
+	//カードのスート、数字の入力を促す
 	public boolean requestCard() {
 		int a[]=player.selectCard();
 		int x=a[0];
@@ -41,10 +42,12 @@ public class Turn {
 		}
 	}
 
+	//カードの取得
 	public Card getCard() {
 		return card;
 	}
 
+	//スートが範囲内になっているかどうか確認
 	public boolean checkSuit(int x) {
 		if(0<=x&&x<=3) {
 			return true;
@@ -54,6 +57,7 @@ public class Turn {
 		}
 	}
 
+	//数字が範囲内になっているかどうか確認
 	public boolean checkNumber(int x) {
 		if(card.getMIN()<=x&&x<=card.getMAX()) {
 			return true;
