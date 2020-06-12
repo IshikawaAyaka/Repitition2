@@ -34,14 +34,11 @@ public class GentleReferee extends Referee{
 		//SPADE,HEART,DIAMOND,CLUB
 		if(answerCard.getSuit() == card.getSuit()) {
 			System.out.println("スート：一致");
-			System.out.println("");
 		}else if(((answerCard.getSuit() == Suit.SPADE) ||(answerCard.getSuit() == Suit.CLUB)) && ((card.getSuit() == Suit.SPADE) || (card.getSuit() == Suit.CLUB)) ||
 				((answerCard.getSuit() == Suit.HEART) || (answerCard.getSuit() == Suit.DIAMOND)) && ((card.getSuit() == Suit.HEART) || (card.getSuit() == Suit.DIAMOND))){
 			System.out.println("スート:惜しい");
-			System.out.println("");
 		}else{
 				System.out.println("スート:不一致");
-				System.out.println("");
 			}
 		}
 	}

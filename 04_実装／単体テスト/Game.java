@@ -62,10 +62,12 @@ public class Game {
 		while(judgement == false) {
 		//ターンの生成
 		turn = new Turn(player);
-		if(nop ==2 && player == firstPlayer) {
+		if(nop ==2 ) {
+			if(player == firstPlayer) {
 			System.out.print("先攻プレイヤーは");
-		}else if(nop ==2 && player == secondPlayer) {
+		}else {
 			System.out.print("後攻プレイヤーは");
+			}
 		}
 		//数字、スートの入力
 		boolean canSelect = false;

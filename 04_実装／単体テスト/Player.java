@@ -12,24 +12,6 @@ public class Player {
 
 	public Player() {
 	}
-	//審判を選ぶ
-	public int selectReferee() {
-		System.out.println("審判を選んで下さい ");
-		System.out.println("---");
-		System.out.println("* 入力例 : 1:厳しい審判, 2:やさしい審判 ");
-		int ret;
-		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			String input = reader.readLine();
-				ret = Integer.parseInt(input);
-			return ret;
-
-		}catch(Exception e) {
-			ret = -1;
-			return ret;
-		}
-	}
-
 
 	//カードを選ぶ
 	public int[] selectCard() {
