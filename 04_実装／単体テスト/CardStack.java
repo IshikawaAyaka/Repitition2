@@ -19,15 +19,19 @@ public class CardStack {
 				case 0:
 					cards[i][j].setSuit(Suit.SPADE);
 					cards[i][j].setNumber(j+1);
+					break;
 				case 1:
 					cards[i][j].setSuit(Suit.HEART);
 					cards[i][j].setNumber(j+1);
+					break;
 				case 2:
 					cards[i][j].setSuit(Suit.DIAMOND);
 					cards[i][j].setNumber(j+1);
+					break;
 				case 3:
 					cards[i][j].setSuit(Suit.CLUB);
 					cards[i][j].setNumber(j+1);
+					break;
 
 				}
 			}
